@@ -38,4 +38,11 @@ describe('app routes', () => {
 
     expect(res.text).toEqual('<h1>blue</h1>');
   });
+
+  it('test the /index.hmtl GET route', async() => {
+    const res = await request(app)
+      .get('/index.html');
+
+    expect(res.text).toEqual('<h2>hello</h2>');
+  });
 });
